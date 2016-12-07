@@ -18,18 +18,17 @@ and YML files.
 In terminal:
 
 ```sh
-    composer require matiasnamendola/slimpower-config
+composer require matiasnamendola/slimpower-config
 ```
 
 Or you can add use this as your composer.json:
 
 ```json
-    {
-        "require": {
-            "matiasnamendola/slimpower-config": "dev-master"
-        }
+{
+    "require": {
+        "matiasnamendola/slimpower-config": "dev-master"
     }
-
+}
 ```
 
 ###Requirements
