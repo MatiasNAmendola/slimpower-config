@@ -45,7 +45,6 @@ The `Config` object can be created via the factory method `load()`, or
 by direct instantiation:
 
 ```php
-
 <?php
 
 use SlimPower\Config\Config;
@@ -62,7 +61,6 @@ $conf = new Config(__DIR__ . '/config');
 
 // Load values from optional files
 $conf = new Config(array('config.dist.json', '?config.json'));
-
 ```
 
 Files are parsed and loaded depending on the file extension. Note that when
@@ -77,7 +75,6 @@ name alphabetically.
 Getting values can be done in three ways. One, by using the `get()` method:
 
 ```php
-
 // Get value using key
 $debug = $conf->get('debug');
 
@@ -86,13 +83,11 @@ $secret = $conf->get('security.secret');
 
 // Get a value with a fallback
 $ttl = $conf->get('app.timeout', 3000);
-
 ```
 
 The second method, is by using it like an array:
 
 ```php
-
 // Get value using a simple key
 $debug = $conf['debug'];
 
@@ -101,16 +96,13 @@ $secret = $conf['security.secret'];
 
 // Get nested value like you would from a nested array
 $secret = $conf['security']['secret'];
-
 ```
 
 The third method, is by using the `all()` method:
 
 ```php
-
 // Get all values
 $data = $conf->all();
-
 ```
 
 ###Setting values
@@ -121,7 +113,6 @@ source files**. By design, if you need to make changes to your
 configuration files, you have to do it manually.
 
 ```php
-
 $conf = Config::load('config.json');
 
 // Sample value from our config file
@@ -138,7 +129,6 @@ assert($conf['secret'] == '123');
 
 // This will fail
 assert($conf['secret'] == '456');
-
 ```
 
 ###Using with default values
@@ -148,7 +138,6 @@ application settings, without needing file I/O. You can do this by extending
 the `AbstractConfig` class and populating the `getDefaults()` method:
 
 ```php
-
 <?php
 
 namespace ...;
@@ -174,7 +163,6 @@ class MyConfig extends AbstractConfig
         );
     }
 }
-
 ```
 
 ##Security
