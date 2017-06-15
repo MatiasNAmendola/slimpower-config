@@ -1,7 +1,6 @@
-#SlimPower - Config
+# SlimPower - Config
 
-[![Latest version][ico-version]][link-packagist]
-[comment]: # ([![Total Downloads][ico-downloads]][link-downloads])
+[![Latest version][ico-version]][link-packagist] [![Total Downloads][ico-downloads]][link-downloads]
 
 [![Latest Stable Version](https://poser.pugx.org/matiasnamendola/slimpower-config/version?format=flat-square)](https://packagist.org/packages/matiasnamendola/slimpower-config) 
 [![Latest Unstable Version](https://poser.pugx.org/matiasnamendola/slimpower-config/v/unstable?format=flat-square)](//packagist.org/packages/matiasnamendola/slimpower-config) 
@@ -13,7 +12,7 @@
 Config is a file configuration loader that supports PHP, INI, XML, JSON,
 and YML files.
 
-##Installation
+## Installation
 
 In terminal:
 
@@ -31,14 +30,14 @@ Or you can add use this as your composer.json:
 }
 ```
 
-###Requirements
+### Requirements
 
 Config requires PHP 5.3+, and suggests using the [Symfony Yaml component](https://github.com/symfony/Yaml).
 
 Config is designed to be very simple and straightforward to use. All you can do with
 it is load, get, and set.
 
-###Loading files
+### Loading files
 
 The `Config` object can be created via the factory method `load()`, or
 by direct instantiation:
@@ -69,7 +68,7 @@ from the last loaded file**.
 When loading a directory, the path is `glob`ed and files are loaded in by
 name alphabetically.
 
-###Getting values
+### Getting values
 
 Getting values can be done in three ways. One, by using the `get()` method:
 
@@ -104,7 +103,7 @@ The third method, is by using the `all()` method:
 $data = $conf->all();
 ```
 
-###Setting values
+### Setting values
 
 Although Config supports setting values via `set()` or, via the
 array syntax, **any changes made this way are NOT reflected back to the
@@ -130,7 +129,7 @@ assert($conf['secret'] == '123');
 assert($conf['secret'] == '456');
 ```
 
-###Using with default values
+### Using with default values
 
 Sometimes in your own projects you may want to use Config for storing
 application settings, without needing file I/O. You can do this by extending
@@ -164,18 +163,13 @@ class MyConfig extends AbstractConfig
 }
 ```
 
-##Security
-
-If you discover any security related issues, please email [soporte.esolutions@gmail.com](mailto:soporte.esolutions@gmail.com?subject=[SECURITY] Config Security Issue) instead of using the issue tracker.
-
-
-##Credits
+## Credits
 
 - [Matías Nahuel Améndola](https://github.com/matiasnamendola)
 - [Franco Soto](https://github.com/francosoto)
 
 
-##License
+## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
